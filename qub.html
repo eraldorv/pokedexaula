@@ -1,0 +1,11 @@
+<h2>#${pokemon.id} - ${pokemon.name.toUpperCase()}</h2>
+<img class="pokemon-image" src="${pokemon,sprites.front_default}" alt="${pokemon.name}">
+<div class="types">
+    ${types.map(type => `<div>
+<div class="type" style="background-color: ${typeColors[type] || '#777'}">
+            ${type.toUpperCase()}
+        </div>
+    </div>`)join('')}
+</div>
+<p>Altura: ${pokemon.height / 10} m</p>
+<p>Peso: ${pokemon.weight / 10} kg</p>
